@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quản lý đăng kí đăng nhập</title>
+	<style type="text/css">
+		.container{
+			margin: 0px auto;
+			background-color: #18f0df;
+			padding: 15px;
+			width: 500px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="body">
+			<label>FullName:</label>
+			<input type="text" name="fName" placeholder="Nhập tên của bạn" id="fname_id" onchange="updateName()"><br>
+			<label>Age:</label>
+			<input type="number" name="age" placeholder="Nhập tuổi của bạn" id="age_id" onchange="updateAge()"><br>
+			<label>Email:</label>
+			<input type="email" name="email" placeholder="Nhập email của bạn" id="email_id" onchange="updateEmail()">
+			<button>Đăng kí</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var fnameTag = document.getElementById('fname_id')
+		var ageTag = document.getElementById('age_id')
+		var emaiTag = document.getElementById('email_id')
+	/**	fnameTag.value = fName
+		ageTag.value = age
+		emaiTag.value = email */
+		function updateName() {
+			v = fnameTag.value
+			localStorage.setItem('fullName', v)
+		}
+		function updateAge() {
+			v = ageTag.value
+			localStorage.setItem('Age', v)
+		}
+		function updateEmail() {
+			v = emaiTag.value
+			localStorage.setItem('Email', v)
+		}
+	 </script>
+</body>
+</html>

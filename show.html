@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hiển Thị Thông Tin Tài Khoản</title>
+	<style type="text/css">
+		.container{
+			margin: 0px auto;
+			background-color: #18f0df;
+			padding: 15px;
+			width: 500px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body onload="show()">
+	<div class="container">
+		<div class="form-group">
+			<span style="font-weight: bold;" id="fname_id">FullName:</span>
+		</div>
+		<div class="form-group">
+			<span style="font-weight: bold;" id="age_id">Age:</span>
+		</div>
+		<div class="form-group">
+			<span style="font-weight: bold;" id="email_id">Email:</span>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function show() {
+		var fnameTag = localStorage.getItem('fullName')
+		var ageTag = localStorage.getItem('age')
+		var emaiTag = localStorage.getItem('email')
+
+		document.getElementById('fname_id').innerHTML += fname
+		document.getElementById('age_id').innerHTML += age
+		document.getElementById('email_id').innerHTML += email 
+			}
+	</script>
+</body>
+</html>
